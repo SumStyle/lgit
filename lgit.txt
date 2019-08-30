@@ -1,0 +1,40 @@
+1.安装配置
+sudo apt-get install git
+
+git config --global user.name "suming9864"
+git config --global user.email "suming9864@163.com"
+#git config --global http.sslVerify false
+git config --global http.proxy http://su-ming:sm_201808222466@proxy.neusoft.com:8080
+
+ssh-keygen.exe -t rsa -C "suming9864@163.com"
+#add ssh "id_key.pub" to github
+
+2.初始化本地并提交到github
+git init
+git add lgit.txt
+git commit -m "new file"
+git status
+git log
+git log --pretty=oneline
+git reset --hard HEAD^
+git reset --hard 1094a
+git reflog
+git checkout -- lgit.txt  //丢弃工作区修改
+git reset HEAD lgit.txt   //丢弃暂存区修改，退到工作区
+
+
+$ git remote add origin git clone https://github.com/suming9864/lgit
+$ git push -u origin master //第一次远程提交
+$ git push origin master
+
+$ git clone https://github.com/suming9864/lgit
+$ git checkout -b dev
+$ git branch dev
+$ git checkout dev
+
+$ git branch
+$ git checkout master
+$ git merge dev
+$ git branch -d dev
+
+$ git checkout -b feature1
